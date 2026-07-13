@@ -1,0 +1,80 @@
+:root {
+  /* --- Superfícies (paleta "midnight ledger") --- */
+  --ink: #0b1220;
+  --surface: #121b2e;
+  --surface-raised: #182437;
+  --surface-input: #0f1826;
+  --hairline: #24344a;
+  --hairline-soft: #1b2740;
+
+  /* --- Texto --- */
+  --text-primary: #eaf0f6;
+  --text-secondary: #8ea0b8;
+  --text-muted: #5c6f87;
+
+  /* --- Escala de risco (assinatura visual, reutilizada em tudo) --- */
+  --risco-baixo: #35d0a8;
+  --risco-moderado: #f2b84b;
+  --risco-alto: #f0813d;
+  --risco-muito-alto: #e14f4f;
+
+  /* --- Tipografia --- */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--ink);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+input,
+select {
+  font-family: var(--font-mono);
+}
+
+::selection {
+  background: var(--risco-baixo);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Dados e modelos grandes ficam versionados via DVC, não Git
+data/raw/*.csv
+data/processed/*.csv
+models/*.pkl
+
+.vscode/
+.DS_Store
+frontend/node_modules/
